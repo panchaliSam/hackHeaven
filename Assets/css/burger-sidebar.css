@@ -1,0 +1,10 @@
+.burger-icon {
+    position: relative;
+}
+
+.sidebar {
+    display: none;
+}
+.sidebar.active {
+    display: block;
+}

@@ -10,7 +10,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HackHeaven</title>
-    <link type="image/jpg" sizes="24x24" rel="icon" href="./Assets/icons/logo.jpg">
+    <link type="image/jpg" sizes="24x24" rel="icon" href="./Assets/icons/HackHeaven Logos/Icon PNG.png">
 
     <!-- Font Awesome -->
     <link
@@ -54,20 +54,21 @@ session_start();
     />
     
     <!-- CSS styles -->
+     <link rel="stylesheet" href="./Assets/css/scrollBar.css">
 
     <!--Js-->
     <script src="./Assets/js/navbar.js"></script>
-    
+
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D9D9D9;">
+<body class="custom-scrollbar">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1D1D1B;">
         <!-- Container wrapper -->
         <div class="container">
         <!-- Navbar brand -->
         <a class="navbar-brand me-2" href="https://mdbgo.com/">
             <img
-            src="./Assets/icons/logo.jpg"
+            src="./Assets/icons/HackHeaven Logos/Dark BG PNG.png"
             height="64"
             alt="HackHeaven Logo"
             loading="lazy"
@@ -93,7 +94,7 @@ session_start();
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">Home</a>
+                <a class="nav-link" href="./index.php" style="color: white;">Home</a>
             </li>
             <li class="nav-item dropdown">
                 <a
@@ -103,7 +104,7 @@ session_start();
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style="color: black;"
+                style="color: white;"
                 >
                 Explore
                 </a>
@@ -121,7 +122,7 @@ session_start();
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
-            style="color: black;"
+            style="color: white;"
             >
             Community
             </a>
@@ -135,10 +136,10 @@ session_start();
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-success px-3 me-2" style="width: 100px;">
+        <button type="button" class="btn btn-success px-3 me-2" style="width: 100px;" data-bs-toggle="modal" data-bs-target="#signInModal">
             Sign In
         </button>
-        <button type="button" class="btn btn-success me-3" style="width: 100px;">
+        <button type="button" class="btn btn-success me-3" style="width: 100px;" data-bs-toggle="modal" data-bs-target="#signUpModal">
             Sign Up
         </button>
         </div>
@@ -147,6 +148,72 @@ session_start();
         </div>
         <!-- Container wrapper -->
     </nav>
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="./Assets/Pages/user-dashboard.php" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                </div>
+                <center><button type="submit" class="btn btn-primary" style="background-color: green;">Sign In</button></center>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Sign Up Modal -->
+     <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form action="./Assets/Pages/user-dashboard.php" method="POST">
+                <div class="mb-3">
+                    <label for="signUpFirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="signUpFirstName">
+                </div>
+                <div class="mb-3">
+                    <label for="signUpLastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="signUpLastName">
+                </div>
+                <div class="mb-3">
+                    <label for="signUpEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="signUpPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="signUpPassword">
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="termsCheck">
+                    <label class="form-check-label" for="termsCheck">I agree to the terms and conditions</label>
+                </div>
+                <center><button type="submit" class="btn btn-primary" style="background-color: green;">Sign Up</button></center>
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script
@@ -159,7 +226,7 @@ session_start();
 
     <!--Image Carsouel-->
     <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center align-items-center" data-ride="carousel" style="width: 80%; margin: 0 auto;">
-<div class="carousel-inner" style="width: 100%; height: 100%;">
+        <div class="carousel-inner" style="width: 100%; height: 100%;">
             <div class="carousel-item active">
                 <img src="./Assets/Images/Home1.jpg" class="d-block w-100" alt="HomeImage" style="max-width: 100%; max-height: 600px; object-fit: cover;">
             </div>
@@ -202,42 +269,42 @@ session_start();
 
     <!--Images-->
     <div class="card-container" style="overflow-x: auto; white-space: nowrap; margin: 0 5px;">
-        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px;">
+        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px; background-color:black;">
             <img class="card-img-top" src="./Assets/Images/Hackathon.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title 1</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title" style="color: white;">HackX</h5>
+                <a href="#" class="btn btn-primary" style="background-color: green;">View</a>
             </div>
         </div>
         
-        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px;">
+        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px; background-color:black;">
             <img class="card-img-top" src="./Assets/Images/Hackathon.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title 2</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title" style="color: white;">CodeFest</h5>
+                <a href="#" class="btn btn-primary" style="background-color: green;">View</a>
             </div>
         </div>
-        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px;">
+        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px; background-color:black;">
             <img class="card-img-top" src="./Assets/Images/Hackathon.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title 1</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title" style="color: white;">CodeFest</h5>
+                <a href="#" class="btn btn-primary" style="background-color: green;">View</a>
             </div>
         </div>
         
-        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px;">
+        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px; background-color:black;">
             <img class="card-img-top" src="./Assets/Images/Hackathon.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title 2</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title" style="color: white;">CodeFest</h5>
+                <a href="#" class="btn btn-primary" style="background-color: green;">View</a>
             </div>
         </div>
 
-        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px;">
+        <div class="card" style="display: inline-block; width: 18rem; margin-right: 10px; background-color:black;">
             <img class="card-img-top" src="./Assets/Images/Hackathon.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title 2</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title" style="color: white;">CodeFest</h5>
+                <a href="#" class="btn btn-primary" style="background-color: green;">View</a>
             </div>
         </div>
     </div>
@@ -316,9 +383,9 @@ session_start();
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: #D9D9D9;">
-            © 2024 Copyright:
-            <a class="text-body" href="https://mdbootstrap.com/">HackHeaven</a>
+        <div class="text-center p-3" style="background-color: #1D1D1B; color:white;">
+            © 2024 Copyright : 
+            <img src="./Assets/icons/HackHeaven Logos/Name White.png" height="15px">
         </div>
         <!-- Copyright -->
     </footer>
