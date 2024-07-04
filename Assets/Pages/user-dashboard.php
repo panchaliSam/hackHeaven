@@ -1,3 +1,4 @@
+
 <?php
 // Start session
 session_start();
@@ -55,7 +56,7 @@ session_start();
     
     <!-- CSS styles -->
     <link rel="stylesheet" href="../css/scrollBar.css">
-    <link rel="stylesheet" href="../css/burger-sidebar.css">
+    <link rel="stylesheet" href="../css/user-sidebar.css">
 
     <!--Js-->
     <script src="./Assets/js/navbar.js"></script>
@@ -68,23 +69,9 @@ session_start();
         include_once("../Components/navbar.php")
     ?>
 
-    <div class="burger-icon">
-        <button style="background-color:white; border: none;" onclick="toggleSidebar()">
-            <img src="../icons/burger-bar.png" height="40px" width="auto" style="margin-top:90px; margin-left:20px;">
-        </button>
-    </div>
-
-    <div id="sidebar" class="sidebar">
-        <?php
-            include_once("../Components/user-sideBar.php")
-        ?>
-    </div>
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById("sidebar");
-            sidebar.classList.toggle("active");
-        }
-    </script>
+    <?php
+        include_once("../Components/user-sideBar.php")
+    ?>
 
     <!-- Bootstrap JS -->
     <script

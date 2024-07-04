@@ -1,6 +1,6 @@
 <!--Database Configuration-->
 <?php
-    $servername = "localhost1";
+    $servername = "localhost:3307";
     $username = "root";
     $password = "";
     $dbname = "hackheaven";
