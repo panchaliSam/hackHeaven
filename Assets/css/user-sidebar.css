@@ -1,10 +1,30 @@
-.burger-icon {
-    position: relative;
+.sidebar-section a:hover{
+    background-color: #099FE1;
 }
 
-.sidebar {
-    display: none;
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade-in animation */
+    opacity: 0;
+    transition: opacity 0.3s;
 }
-.sidebar.active {
-    display: block;
+
+/* Show the tooltip text when hovering */
+a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }

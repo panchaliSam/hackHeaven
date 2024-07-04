@@ -1,0 +1,91 @@
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #72BD71;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile{
+    display: flex;
+}
+
+#profile-info{
+    flex-direction: row;
+}
+
+/* Styles for user-details-buttons */
+.user-details-buttons {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+/* Styles for buttons inside user-details-buttons */
+.user-details-buttons button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(140, 139, 139);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Additional styles for specific buttons */
+.user-details-buttons button:nth-of-type(1) {
+    /* Styles for Edit Details button */
+    background-color: #1D1D1B;
+    width: 250px;
+    text-align: center;
+    border-radius:10rem;
+}
+
+.user-details-buttons button:nth-of-type(2) {
+    /* Styles for Change Password button */
+    background-color: #1D1D1B;
+    width: 250px;
+    text-align: center;
+    border-radius:10rem;
+}
+
+.user-details-buttons button:nth-of-type(3) {
+    /* Styles for Subscription Plan button */
+    background-color: #1D1D1B;
+    width: 250px;
+    text-align: center;
+    border-radius:10rem;
+}
+
+.user-details-buttons button:nth-of-type(4) {
+    /* Styles for Subscription Plan button */
+    background-color: #1D1D1B;
+    width: 250px;
+    text-align: center;
+    border-radius:10rem;
+}
+
+#editDetailsBtn:hover {
+    box-shadow: 0 6px 10px #72BD71;
+    color:white;
+}
+
+#editDetailsBtn:active{
+    background-color: #72BD71;
+}

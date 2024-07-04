@@ -1,7 +1,7 @@
-
 <?php
 // Start session
 session_start();
+include('../config/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -57,6 +57,7 @@ session_start();
     <!-- CSS styles -->
     <link rel="stylesheet" href="../css/scrollBar.css">
     <link rel="stylesheet" href="../css/user-sidebar.css">
+    <link rel="stylesheet" href="../css/user-account.css">
 
     <!--Js-->
     <script src="./Assets/js/navbar.js"></script>
@@ -71,6 +72,10 @@ session_start();
 
     <?php
         include_once("../Components/user-sideBar.php")
+    ?>
+
+    <?php
+        include_once("../Components/user-account.php")
     ?>
 
     <!-- Bootstrap JS -->

@@ -1,10 +1,7 @@
 <?php
 // Start session
 session_start();
-if(!isset($_SESSION['userId']) || $_SESSION['isAdmin']){
-    header("Location: /Assets/Pages/admin-dashboard.php");
-    exit();
-}
+include('../config/config.php');
 ?>
 
 <!DOCTYPE html>
